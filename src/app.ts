@@ -1,9 +1,10 @@
 import express from 'express';
+import ProductRoutes from './routes/product.routes';
 
 const app = express();
 
 app.use(express.json());
 
-export default app;
+app.use(ProductRoutes);
 
-// primeiro commit - criação da PR
+export default app;
