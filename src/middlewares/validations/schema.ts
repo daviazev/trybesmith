@@ -1,8 +1,11 @@
 import Joi from 'joi';
 
-const loginFields = Joi.object({
+export const loginFields = Joi.object({
   username: Joi.string().required(),
   password: Joi.string().required(),
 });
 
-export default loginFields;
+export const productFields = Joi.object({
+  name: Joi.string().min(3).required(),
+  amount: Joi.string().min(3).required(),
+});

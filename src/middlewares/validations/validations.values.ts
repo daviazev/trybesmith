@@ -1,6 +1,6 @@
-import loginFields from './schema';
+import { loginFields, productFields } from './schema';
 
-const validateLoginFields = (username: string, password: string) => {
+export const validateLoginFields = (username: string, password: string) => {
   const { error } = loginFields.validate({ username, password });
 
   console.log(error);
@@ -10,4 +10,12 @@ const validateLoginFields = (username: string, password: string) => {
   return { message: null };
 };
 
-export default validateLoginFields;
+export const validateProductFields = (name: string, amount: string) => {
+  const { error } = productFields.validate({ name, amount });
+
+  console.log(error);
+
+  if (error) return { message: error.message };
+
+  return { message: null };
+};
