@@ -1,6 +1,6 @@
 # Trybesmith
 
-  <img src="images/print-aprovacao.png" height="200px" />
+  <img src="images/print-aprovacao.png" />
 
 ### Sobre
 
